@@ -1,6 +1,6 @@
-// const errorHandler = require("./middlewares/error.middleware");
-import express from "express";
-import cors from "cors";
+const errorHandler = require("./middlewares/error.middleware");
+const express = require("express");
+const cors = require("cors");
 const app = express();
 
 // middlewares
@@ -11,7 +11,7 @@ app.use(express.json());
 
 // text route
 app.get("/", (req, res) => {
-  res.send("My AIP is running like Rocket");
+  res.send("My API is running.");
 });
 
 app.use(errorHandler);
